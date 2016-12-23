@@ -1,0 +1,32 @@
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li ng-class="{active: selectedTab === TABS.comingSoon}" role="presentation">
+      <a ng-click="setSelectedTab(TABS.comingSoon)"><small>coming Soon</small></a>
+    </li>
+    <li ng-class="{active: selectedTab === TABS.inTheatres}" role="presentation">
+      <a ng-click="setSelectedTab(TABS.inTheatres)"><small>in Theatres</small></a>
+    </li>
+  </ul>
+  <div class="tab-content" ng-if="selectedTab === TABS.comingSoon">
+	<div class="floating-box aligntop" ng-repeat="movie in movieData.comingSoon.movies">
+      <a ng-click="viewMovie(movie)"><img class="cursorpointer" ng-src="{{movie.trailer.thumbnail}}"></a>
+      <div>
+      	{{movie.name}}<br>
+      	<span class="sized">{{movie.movie_rating}}</span>
+      	<span class="smallsized">{{movie.release_date}}, {{movie.language}}</span><br>
+      	<span class="sized linespacing">{{movie.short_synopsis}}</span>
+      </div>
+	</div>
+  </div>
+  <div class="tab-content" ng-if="selectedTab === TABS.inTheatres">
+	<div class="floating-box aligntop" ng-repeat="movie in movieData.inTheatres.movies">
+      <a ng-click="viewMovie(movie)"><img class="cursorpointer" ng-src="{{movie.trailer.thumbnail}}"></a>
+      <div>
+      	{{movie.name}}<br>
+      	<span class="sized">{{movie.movie_rating}}</span>
+      	<span class="smallsized">{{movie.release_date}}, {{movie.language}}</span><br>
+      	<span class="sized linespacing">{{movie.short_synopsis}}</span>
+      </div>
+	</div>
+  </div>
+</div>

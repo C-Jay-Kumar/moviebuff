@@ -1,0 +1,18 @@
+<h3 class="bolded">{{movie.name}}</h3>
+<span class="smallsized">{{movie.release_date}}, {{movie.language}}, {{movie.running_time}} minutes</span>
+
+<p>{{movie.short_synopsis}}</p>
+
+<p><span class="sized">Cast: </span><span class="bolded sized" ng-repeat="actor in movie.cast">{{actor.name}},  </span></p>
+
+<p><span class="sized">Crew: </span><span class="bolded sized" ng-repeat="person in movie.crew">{{person.name}} ({{person.role}}), </span></p>
+
+<p><span class="sized">Rating: </span><span class="sized">{{movie.certification}}</span></p>
+
+<p><span class="sized">Genres: </span><span class="bolded sized" ng-repeat="genre in movie.genres">{{genre}}, </span></p>
+
+<p><span class="sized">Release Dates: </span><span class="sized">{{movie.release_date}}</span></p>
+
+<p><span class="sized">Movie Rating: </span><span class="sized">{{movie.movie_rating}}</span></p>
+
+<p><span class="sized">Music Rating: </span><span class="sized">{{movie.music_rating}}</span></p>

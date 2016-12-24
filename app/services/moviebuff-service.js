@@ -12,8 +12,8 @@ moviebuffService.factory('MoviebuffSvc', ['JsonUrlsSvc', '$q', function(JsonUrls
       
     loadMovieData : function loadMovieData() {
       var movieDataDeferred = $q.defer();
-      var urls = ['http://www.moviebuff.com/api/v1/movies?status=IT',
-                  'http://www.moviebuff.com/api/v1/movies?status=CS'];
+      var urls = ['https://www.moviebuff.com/api/v1/movies?status=IT',
+                  'https://www.moviebuff.com/api/v1/movies?status=CS'];
       var movies = {};
 
       var movieDataPromise = (new JsonUrlsSvc(urls)).loadJsonData();
@@ -31,7 +31,7 @@ moviebuffService.factory('MoviebuffSvc', ['JsonUrlsSvc', '$q', function(JsonUrls
     
     loadMovie : function loadMovie(uuid) {
       var movieDataDeferred = $q.defer();
-      var url = 'http://www.moviebuff.com/api/v1/movies/' + uuid;
+      var url = 'https://www.moviebuff.com/api/v1/movies/' + uuid;
       var urls = [url];
       var movie = null;
 

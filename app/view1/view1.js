@@ -26,4 +26,8 @@ angular.module('myApp.view1', ['ngRoute', 'moviebuffModel'])
 	MoviebuffMdl.setMovie(movie);
 	$location.path('/view2');
   };
+  
+  $scope.getRatingPercent = function(rating) {
+	  return 'p' + Math.abs((rating / 5) * 100);
+  };
 }]);

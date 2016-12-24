@@ -12,7 +12,13 @@
       <a ng-click="viewMovie(movie)"><img class="cursorpointer" ng-src="{{movie.trailer.thumbnail}}"></a>
       <div>
       	{{movie.name}}<br>
-      	<span class="sized">{{movie.movie_rating}}</span>
+      	<div class="c100 small" ng-class="getRatingPercent({{movie.movie_rating}})">
+  		  <span>{{movie.movie_rating}}</span>
+  		  <div class="slice">
+    	    <div class="bar"></div>
+      	    <div class="fill"></div>
+  		  </div>
+ 	    </div>
       	<span class="smallsized">{{movie.release_date}}, {{movie.language}}</span><br>
       	<span class="sized linespacing">{{movie.short_synopsis}}</span>
       </div>
@@ -23,7 +29,13 @@
       <a ng-click="viewMovie(movie)"><img class="cursorpointer" ng-src="{{movie.trailer.thumbnail}}"></a>
       <div>
       	{{movie.name}}<br>
-      	<span class="sized">{{movie.movie_rating}}</span>
+      	<div class="c100 small" ng-class="getRatingPercent({{movie.movie_rating}})">
+      	  <span>{{movie.movie_rating}}</span>
+  		  <div class="slice">
+    	    <div class="bar"></div>
+      	    <div class="fill"></div>
+  		  </div>
+ 	    </div>
       	<span class="smallsized">{{movie.release_date}}, {{movie.language}}</span><br>
       	<span class="sized linespacing">{{movie.short_synopsis}}</span>
       </div>
